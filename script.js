@@ -1,7 +1,7 @@
-var w = 0.03;
-var d = 0.01;
-
-alert("hello");
+// var w;
+// var d;
+// var n;
+// var h;
 
 function HStep(w, d, n){
     return d * Math.cos(Math.asin(0.7071/n)) / Math.sin(0.7854 - Math.asin(0.7071/n)) - w /1.4142/Math.tan(Math.asin(0.7071/n));
@@ -38,16 +38,22 @@ function solveThree(w, d, from) {
     }
 }
 
-alert("hello");
+function solveH(w, n){
+    return 70.71 * w / Math.tan(Math.asin(0.7071 / n));
+}
 
+function main(w, d){
+  n = solveOne(w, d);
+  n = solveTwo(w, d, n);
+  n = solveThree(w, d, n);
+  n = ((n * 1000) ^ 0) / 1000;
 
+  h = solveH(w, n);
+  h = ((h * 1000) ^ 0) / 1000;
 
-var a = solveOne(w, d);
-a = ((a*100) ^ 0) / 100;
-alert(a);
-a = solveTwo(w, d, a);
-a = ((a*1000) ^ 0) / 1000;
-alert(a);
-a = solveThree(w, d, a);
-a = ((a*10000) ^ 0) / 10000;
-alert(a);
+  alert(n);
+  alert(h);
+
+}
+
+main(w, d);
