@@ -15,3 +15,15 @@ input{
 .right{
     float: right;
 }
+thead{
+    background-color: rgba(0, 0, 0, 0.8);
+}
+thead td {
+    color: white;
+}
+.help-box{
+    text-align: center;
+}
+.copy-con{
+  text-align: center;
+}
