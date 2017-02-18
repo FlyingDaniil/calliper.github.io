@@ -4,31 +4,65 @@
         <meta charset="utf-8">
         <title>Бесконтактный штангенциркуль</title>
 
+        <link rel="stylesheet" href="main.css">
+
         <script src="script.js">
         </script>
-        <!--Добавить бутстрап-->
+
+        <!-- Latest compiled and minified CSS -->
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+        <!-- Optional theme -->
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+
+        <!-- Latest compiled and minified JavaScript -->
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
 
     </head>
     <body>
         <!-- Навбар -->
+        <nav class="nav navbar-default">
+          <div class="container">
+            <div class="navbar-header">
+              <a href="index.html" class="navbar-brand">Бесконтактный штангенциркуль</a>
+            </div>
+            <div class="right">
+              <ul class="nav navbar-nav">
+                  <li class="active">
+                    <a href="index.html">Главная</a>
+                  </li>
+                  <li>
+                    <a href="help.html">Помощь</a>
+                  </li>
+              </ul>
+            </div>
+          </div>
+        </nav>
 
-        <!-- Слайдер -->
+        <!-- Баннер -->
+        <div class="container">
+            <div class="row">
+                <img class="main-img" src="images/main.jpg">
+            </div>
+            <div class="row">
+                <br>
+                <h3 class="recepy">Введите экспеиментальные w и d в сантиметрах и нажмите "Рассчитать"</h3>
+            </div>
+        </div>
 
-        <!-- Предупреждение о js -->
-
-
-
-        <script src="script.js">
-        </script>
 
         <form>
-            <input id="w" placeholder="w в метрах">
-            <input id="d" placeholder="d в метрах">
-
-            <button class="btn" onclick="main(w, d)">Рассчитать</button>
-
-            <output id="n" placeholder="h в метрах">
-            <output id="h" placeholder="n">
+            <br>
+            <input id="w" placeholder="w в сантиметрах">
+            <input id="d" placeholder="d в сантиметрах">
+            <br>
+            <br>
+            <input type="button" class="btn btn-primary" onclick="main()" value="Рассчитать">
+            <br>
+            <br>
+            <input id="n" placeholder="h в сантиметрах">
+            <input id="h" placeholder="n">
+            <br>
         </form>
 
         <!-- Футер -->
