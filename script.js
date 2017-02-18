@@ -1,10 +1,5 @@
-// var w;
-// var d;
-// var n;
-// var h;
-
 function HStep(w, d, n){
-    return d * Math.cos(Math.asin(0.7071/n)) / Math.sin(0.7854 - Math.asin(0.7071/n)) - w /1.4142/Math.tan(Math.asin(0.7071/n));
+    return d * Math.cos(Math.asin(0.70710678/n)) / Math.sin(0.785398 - Math.asin(0.70710678/n)) - w * 0.70710678 /Math.tan(Math.asin(0.70710678/n));
 }
 
 function solveOne(w, d){
@@ -39,20 +34,27 @@ function solveThree(w, d, from) {
 }
 
 function solveH(w, n){
-    return 70.71 * w / Math.tan(Math.asin(0.7071 / n));
+    return 70.710678 * w / Math.tan(Math.asin(0.70710678 / n));
 }
 
-function main(w, d){
-  n = solveOne(w, d);
-  n = solveTwo(w, d, n);
-  n = solveThree(w, d, n);
-  n = ((n * 1000) ^ 0) / 1000;
+function main(){
+  var dd = d.value;
+  var ww = w.value;
+  var nn, hh;
+  dd /= 100;
+  ww /= 100;
+  nn = solveOne(ww, dd);
+  nn = solveTwo(ww, dd, nn);
+  nn = solveThree(ww, dd, nn);
+  nn = Math.round(nn * 100) / 100;
 
-  h = solveH(w, n);
-  h = ((h * 1000) ^ 0) / 1000;
+  hh = solveH(ww, nn);
+  hh = Math.round(hh * 100) / 100;
 
-  alert(n);
-  alert(h);
+  d.value = d.value + " cm";
+  w.value = w.value + " cm";
+  n.value = nn ;
+  h.value = hh + " cm";
 
 }
 
