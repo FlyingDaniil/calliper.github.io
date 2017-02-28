@@ -46,10 +46,10 @@ function main(){
   nn = solveOne(ww, dd);
   nn = solveTwo(ww, dd, nn);
   nn = solveThree(ww, dd, nn);
-  nn = Math.round(nn * 100) / 100;
+  nn = Math.round(nn * 1000) / 1000;
 
   hh = solveH(ww, nn);
-  hh = Math.round(hh * 100) / 100;
+  hh = Math.round(hh * 1000) / 1000;
 
   d.value = d.value + " cm";
   w.value = w.value + " cm";
